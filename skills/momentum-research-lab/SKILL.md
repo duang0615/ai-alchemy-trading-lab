@@ -5,6 +5,8 @@ description: AI煉金術第二堂的交易解剖與模塊改造實作。使用�
 
 # 動能研究實作
 
+課程結論與課後操作，先讀專案的 `docs/student-process-gift.md`。以學生的設計、製作、觀察、修改與續工過程為主，研究結果用來決定下一步。讓學生複製指令填入自己的需求，一次完成與驗收一個模塊。
+
 先定位專案（有 README.md、reports/research.json、strategies/momentum_eod/spec.json）。找不到先問解壓位置；不猜全機資料夾、不需要帳密。讀專案 AGENTS.md 與 docs/classroom.md，再選下列模式。
 
 ## 交易解剖（首次先做）

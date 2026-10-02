@@ -6,6 +6,12 @@
 
 **[開啟圖像化實作頁](https://duang0615.github.io/ai-alchemy-trading-lab/)** · **[下載整包 ZIP](https://github.com/duang0615/ai-alchemy-trading-lab/archive/refs/heads/main.zip)**
 
+## 課程最後的禮物
+
+**[學生答案包：帶 AI 完成自己的交易工具（Markdown）](docs/student-process-gift.md)**
+
+把自己的需求填進去，依序讓 AI 設計框架、拆工作、核對產物，看到結果後找原因、改一項再驗證。附知識庫存檔與中斷續工指令。課程結論用三個大區塊：**想清楚 → 帶 AI 做 → 看結果再改**。每次實作的過程都能留給下次接續。
+
 ## 學生先做這兩件事
 
 1. 開啟實作頁，選 `6533`：對照一筆成功、一筆失敗，查訊號、成交時間與成本。
