@@ -1,7 +1,7 @@
 # 學生專案工作規則
 
 - 先讀 README、docs/source-map.md、strategies/momentum_eod/spec.json。區分原始來源、明確規則、未知與教學新增項。
-- 正式回測只用雪鴞 api.bt。資料不足先記錄，不默默换資料源、引擎、股票或期間。
+- 正式回測只用雪鴞 api.bt。資料不足先記錄，不默默換資料源、引擎、股票或期間。
 - 帳密只由 scripts/owl_login.py 讀本機 .env；不要讀取、回傳或提交帳密。不要上傳 .local、大量原始行情或供應商安裝檔。
 - 改策略先建立 strategies/<新名稱>/；複製並記錄原規格，先寫假設再執行，保留失敗結果。現有 run_research.py 僅讀 momentum_eod；新增策略要明確調整入口，不能只改說明文字。
 - 不把來源畫面當成隱藏公式證據；不把盤後近似當成原軟體盤中完整版。
