@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+.local/
+__pycache__/
+*.pyc
+.venv/
+raw-data/
+*.whl
+*.log

@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "source": "講師 N:/ai-sites/momentum-intraday-watch 的動能池說明；盤後教學延伸，非原軟體完整複製",
+  "symbols": ["6533", "3037", "3443", "2357"],
+  "capital_per_independent_run": 10000000,
+  "allocation": 0.5,
+  "entry": "收盤還原價近5日報酬>=5% 且近10日報酬>=3%；次交易日開盤買進",
+  "exit": "持有5個交易日後，或核心動能條件不再成立，次交易日開盤賣出",
+  "comparison": ["base", "volume_1000", "trend_ma20", "buy_hold_50pct"],
+  "sensitivity": {"hold_days": [3, 5, 10], "extra_fee_each_side": [0, 0.001]},
+  "fee_each_side": 0.001425,
+  "sell_tax": 0.003,
+  "unit": 1000,
+  "development_fraction": 0.6,
+  "warmup_days": 60,
+  "price_basis": "Snowyowl adj OHLC；還原價代理研究，非歷史實際成交價格；不另加股息",
+  "selection_note": "6533 為講師先前指定；另三檔固定示範標的，非全市場或無偏選股評估。規則先固定再跑，不挑最佳參數。",
+  "end_rule": "最後兩個交易日不開倉；倒數第二日收盤送出平倉，最後一日開盤結束部位"
+}

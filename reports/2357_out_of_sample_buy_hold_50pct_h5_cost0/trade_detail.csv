@@ -1,0 +1,2 @@
+﻿,name,symbol,direction,type,entry_rule,entry_time,entry_price,exit_rule,exit_time,exit_price,current_time,current_price,qty,unit,cost,entry_amount,exit_amount,predict,pnl,return,margin
+0,buy_hold_50pct,2357,long,平倉,entry,2025-03-21,581.3231,boundary,2026-10-01,961.0,,,8,1000,40646.48334,-4657211.88334,7653980.600000001,,2996768.7166600004,0.6434684080791307,581323.1

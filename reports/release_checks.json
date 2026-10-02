@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-02",
+  "runs": 68,
+  "examples": 8,
+  "checks": [
+    "next-bar open fill",
+    "all positions closed",
+    "fees and P/L",
+    "final equity",
+    "past-only signal arithmetic",
+    "spec hash",
+    "all output files",
+    "local links",
+    "credential pattern scan"
+  ],
+  "classroom_trial": "pending",
+  "local_browser_preview": "file protocol blocked; no browser-render validation claimed"
+}

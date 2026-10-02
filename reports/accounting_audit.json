@@ -1,0 +1,478 @@
+[
+  {
+    "run": "6533_development_base_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "6533_development_volume_1000_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "6533_development_trend_ma20_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "6533_development_buy_hold_50pct_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "6533_out_of_sample_base_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "6533_out_of_sample_volume_1000_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "6533_out_of_sample_trend_ma20_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "6533_out_of_sample_buy_hold_50pct_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "6533_full_base_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "6533_full_volume_1000_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "6533_full_trend_ma20_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "6533_full_buy_hold_50pct_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "6533_out_of_sample_base_h3_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "6533_out_of_sample_base_h10_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "6533_out_of_sample_base_h5_cost0.001",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "6533_out_of_sample_volume_1000_h5_cost0.001",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "6533_out_of_sample_trend_ma20_h5_cost0.001",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3037_development_base_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3037_development_volume_1000_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3037_development_trend_ma20_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3037_development_buy_hold_50pct_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3037_out_of_sample_base_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3037_out_of_sample_volume_1000_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3037_out_of_sample_trend_ma20_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3037_out_of_sample_buy_hold_50pct_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3037_full_base_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3037_full_volume_1000_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3037_full_trend_ma20_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3037_full_buy_hold_50pct_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3037_out_of_sample_base_h3_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3037_out_of_sample_base_h10_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3037_out_of_sample_base_h5_cost0.001",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3037_out_of_sample_volume_1000_h5_cost0.001",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3037_out_of_sample_trend_ma20_h5_cost0.001",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3443_development_base_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3443_development_volume_1000_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3443_development_trend_ma20_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3443_development_buy_hold_50pct_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3443_out_of_sample_base_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3443_out_of_sample_volume_1000_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3443_out_of_sample_trend_ma20_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3443_out_of_sample_buy_hold_50pct_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3443_full_base_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3443_full_volume_1000_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3443_full_trend_ma20_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3443_full_buy_hold_50pct_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3443_out_of_sample_base_h3_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3443_out_of_sample_base_h10_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3443_out_of_sample_base_h5_cost0.001",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3443_out_of_sample_volume_1000_h5_cost0.001",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "3443_out_of_sample_trend_ma20_h5_cost0.001",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "2357_development_base_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "2357_development_volume_1000_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "2357_development_trend_ma20_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "2357_development_buy_hold_50pct_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "2357_out_of_sample_base_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "2357_out_of_sample_volume_1000_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "2357_out_of_sample_trend_ma20_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "2357_out_of_sample_buy_hold_50pct_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "2357_full_base_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "2357_full_volume_1000_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "2357_full_trend_ma20_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "2357_full_buy_hold_50pct_h5_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "2357_out_of_sample_base_h3_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "2357_out_of_sample_base_h10_cost0",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "2357_out_of_sample_base_h5_cost0.001",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "2357_out_of_sample_volume_1000_h5_cost0.001",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  },
+  {
+    "run": "2357_out_of_sample_trend_ma20_h5_cost0.001",
+    "fee_formula_match": true,
+    "pnl_formula_match": true,
+    "final_equity_match": true,
+    "signal_uses_only_past_bars": true
+  }
+]

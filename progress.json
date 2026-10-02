@@ -1,0 +1,11 @@
+{
+  "project": "AI煉金術交易研究實作",
+  "updated": "2026-10-02",
+  "tasks": [
+    {"id":"source","title":"來源与規則拆解","status":"completed","depends_on":[],"artifact":"docs/source-map.md","evidence":"實際查讀講師案例目錄；未知與教學新增項分開"},
+    {"id":"research","title":"68組原生回測","status":"completed","depends_on":["source"],"artifact":"reports/comparison.csv","evidence":"api.bt 68組，4檔、3時段、對照与敏感度"},
+    {"id":"audit","title":"成交、成本与帳務驗收","status":"completed","depends_on":["research"],"artifact":"reports/accounting_audit.json","evidence":"68組下一開盤價、逐筆費用／損益与期末帳務通過"},
+    {"id":"classroom","title":"學生頁面与Skill","status":"awaiting_review","depends_on":["audit"],"artifact":"index.html","evidence":"已製作兩次休息操作；待講師檢視與學生實際試跑"},
+    {"id":"student","title":"學生自己的交易解剖／模塊改造","status":"not_started","depends_on":["classroom"],"artifact":"","evidence":"學生完成後填入本機筆記與驗收結果"}
+  ]
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "symbol": "6533",
+    "variant": "volume_1000",
+    "mean_annualized_daily_return_difference": -0.009697589713395963,
+    "block20_bootstrap95": [
+      -0.13633810429966947,
+      0.12321374788708293
+    ],
+    "note": "相同日期配對、20日區塊重抽樣；探索性，未調整多重比較，不是複利報酬差"
+  },
+  {
+    "symbol": "6533",
+    "variant": "trend_ma20",
+    "mean_annualized_daily_return_difference": -0.007544030440759374,
+    "block20_bootstrap95": [
+      -0.026113941205691625,
+      0.006075922195161237
+    ],
+    "note": "相同日期配對、20日區塊重抽樣；探索性，未調整多重比較，不是複利報酬差"
+  },
+  {
+    "symbol": "3037",
+    "variant": "volume_1000",
+    "mean_annualized_daily_return_difference": 0.0,
+    "block20_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "note": "相同日期配對、20日區塊重抽樣；探索性，未調整多重比較，不是複利報酬差"
+  },
+  {
+    "symbol": "3037",
+    "variant": "trend_ma20",
+    "mean_annualized_daily_return_difference": 0.0,
+    "block20_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "note": "相同日期配對、20日區塊重抽樣；探索性，未調整多重比較，不是複利報酬差"
+  },
+  {
+    "symbol": "3443",
+    "variant": "volume_1000",
+    "mean_annualized_daily_return_difference": 0.008449754850411858,
+    "block20_bootstrap95": [
+      -0.004526833668588774,
+      0.026640714056549625
+    ],
+    "note": "相同日期配對、20日區塊重抽樣；探索性，未調整多重比較，不是複利報酬差"
+  },
+  {
+    "symbol": "3443",
+    "variant": "trend_ma20",
+    "mean_annualized_daily_return_difference": 0.0,
+    "block20_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "note": "相同日期配對、20日區塊重抽樣；探索性，未調整多重比較，不是複利報酬差"
+  },
+  {
+    "symbol": "2357",
+    "variant": "volume_1000",
+    "mean_annualized_daily_return_difference": 0.0,
+    "block20_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "note": "相同日期配對、20日區塊重抽樣；探索性，未調整多重比較，不是複利報酬差"
+  },
+  {
+    "symbol": "2357",
+    "variant": "trend_ma20",
+    "mean_annualized_daily_return_difference": 0.0,
+    "block20_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "note": "相同日期配對、20日區塊重抽樣；探索性，未調整多重比較，不是複利報酬差"
+  }
+]

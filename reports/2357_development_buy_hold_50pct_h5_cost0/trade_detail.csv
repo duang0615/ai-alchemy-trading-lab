@@ -1,0 +1,2 @@
+﻿,name,symbol,direction,type,entry_rule,entry_time,entry_price,exit_rule,exit_time,exit_price,current_time,current_price,qty,unit,cost,entry_amount,exit_amount,predict,pnl,return,margin
+0,buy_hold_50pct,2357,long,平倉,entry,2022-11-14,205.469,boundary,2025-03-19,581.3231,,,24,1000,68763.55301999999,-4938283.0398,13890017.886779997,,8951734.846979998,1.812722109047549,205469.0
