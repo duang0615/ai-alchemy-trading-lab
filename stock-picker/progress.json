@@ -1,0 +1,55 @@
+{
+  "project": "雪鴞選股網站拆解",
+  "updated": "2026-10-03",
+  "live_agent_tracking": false,
+  "tasks": [
+    {
+      "id": "source",
+      "title": "公開18卡與互動拆解",
+      "status": "completed",
+      "depends_on": [],
+      "artifact": "docs/stock-picker-source-audit.md",
+      "evidence": "瀏覽器查讀原站與董監展開條件，記錄矛盾與未知"
+    },
+    {
+      "id": "adapter",
+      "title": "雪鴞資料與12卡計算",
+      "status": "completed",
+      "depends_on": [
+        "source"
+      ],
+      "artifact": "stock-picker/build_data.py",
+      "evidence": "2026-10-02 2342檔取數無欄位錯誤，9項純函式測試通過"
+    },
+    {
+      "id": "ui",
+      "title": "學生選股頁與修改紀錄",
+      "status": "completed",
+      "depends_on": [
+        "adapter"
+      ],
+      "artifact": "stock-picker/index.html",
+      "evidence": "18卡、AND9／OR11、10分頁、11圖表、收藏6533、最低量258→80，瀏覽器實際操作"
+    },
+    {
+      "id": "parity",
+      "title": "原站完整規則與缺欄位對齊",
+      "status": "awaiting_data",
+      "depends_on": [
+        "source"
+      ],
+      "artifact": "docs/stock-picker-source-audit.md",
+      "evidence": "6卡缺資料或完整定義，7卡明示改造，未宣稱完全等價"
+    },
+    {
+      "id": "teaching",
+      "title": "講師與學生實際試跑",
+      "status": "awaiting_review",
+      "depends_on": [
+        "ui"
+      ],
+      "artifact": "docs/stock-picker-workbook.md",
+      "evidence": "兩個10分鐘實作、Skill與完整答案已建立，待實際授課"
+    }
+  ]
+}

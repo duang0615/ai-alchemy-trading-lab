@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-03",
+  "data_date": "2026-10-02",
+  "rule_tests": {
+    "passed": 9,
+    "command": "python stock-picker/test_rules.py"
+  },
+  "local_market": {
+    "universe": 2342,
+    "includes_emerging": true,
+    "candidate_counts": {
+      "gain": 150,
+      "trend": 258,
+      "high": 252,
+      "volume": 23,
+      "foreign": 1,
+      "trust": 7,
+      "box": 19,
+      "relative": 143,
+      "eps": 242,
+      "margins": 47,
+      "holders": 1,
+      "revenue": 6
+    },
+    "trend_after_minimum_2000_lots": 80,
+    "manual_6533_price": 352,
+    "manual_6533_volume_lots": 7575,
+    "ma5_10_20_30_60_independent_reconstruction": "passed"
+  },
+  "demo": {
+    "universe": 16,
+    "and_trend_high": 9,
+    "or_trend_high": 11,
+    "trend_after_minimum_2000_lots": 6
+  },
+  "browser": {
+    "18_cards": "clicked and checked 12 results / 6 stopped",
+    "10_tabs": "headers verified; missing fields are explicit",
+    "chart_cards": 11,
+    "favorite_6533": "persisted and displayed in favorite list",
+    "settings": "258 to 80",
+    "result_search": "6533 displayed",
+    "mobile_layout": "not browser-tested",
+    "downloads": {
+      "CSV": "actual file checked, 6 candidates plus header",
+      "Markdown": "actual file checked, hypothesis / observation / settings / next steps"
+    }
+  },
+  "limitations": [
+    "6 cards awaiting required data or rule clarification",
+    "7 computable rules are disclosed teaching adaptations",
+    "no original hidden-formula parity",
+    "demo is not full market",
+    "fundamental announcement times not verified",
+    "student own-account trial pending"
+  ]
+}

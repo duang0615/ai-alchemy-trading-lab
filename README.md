@@ -6,6 +6,12 @@
 
 **[開啟圖像化實作頁](https://duang0615.github.io/ai-alchemy-trading-lab/)** · **[下載整包 ZIP](https://github.com/duang0615/ai-alchemy-trading-lab/archive/refs/heads/main.zip)**
 
+## 新增：雪鴞選股實作室
+
+**[開啟18張策略卡與選股實作](https://duang0615.github.io/ai-alchemy-trading-lab/stock-picker/)** · **[抄答案與兩次休息練習](docs/stock-picker-workbook.md)** · **[來源與尚缺功能](docs/stock-picker-source-audit.md)**
+
+公開頁是16檔真實教學小樣本，本機版用自己的雪鴞環境掃描目前股票資料。12張可計算，其中7張明示教學改造；6張缺資料或完整規則會停止。保留框架、公式、資料與畫面分工，讓同學抄完成版，再練習一次只改一個模塊。此篩選器尚不是原站100%等價版，也沒有包含完整買賣策略。
+
 ## 課程最後的禮物
 
 **[學生答案包：帶 AI 完成自己的交易工具（Markdown）](docs/student-process-gift.md)**

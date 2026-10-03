@@ -1,0 +1,20 @@
+[
+ {"id":"gain","title":"漲幅驚人","description":"近3日漲幅排行前150名","conditions":["#903 近3日漲幅 Top150"],"status":"available","note":"以收盤價 C(t)/C(t-3)-1 排名。公開示範只在小樣本內排名。"},
+ {"id":"private","title":"董事會決定私募","description":"近一年董事會決定私募普通股","conditions":["#9128 近1年董事會決定私募普通股"],"status":"missing","note":"雪鴞本帳號 Data/MSMP/402積木清單未找到私募公告欄位。不能從股價推測。"},
+ {"id":"block","title":"有鉅額交易","description":"近一日有鉅額交易","conditions":["#9103 近1日鉅額交易、成交金額1萬以上"],"status":"missing","note":"缺鉅額交易明細與金額口徑。"},
+ {"id":"warrant","title":"A級發行人標的","description":"權證發行人最新一季發行標的","conditions":["#9056 最新一季權證發行標的"],"status":"missing","note":"缺發行人資格及權證標的清單。"},
+ {"id":"director","title":"董監持股不足","description":"最新董監持股不足清單","conditions":["#251 董監持股不足"],"status":"missing","note":"持股張數不能替代依法計算的持股不足清單。"},
+ {"id":"election","title":"董監改選行情","description":"可能有的董監改選行情","conditions":["#45 董監持股比率 <20%","#13 股價 >0 且 <30元","#501 董監質押 <20%","#9194 最近1年股價淨值比 >1","#71 千張且占股本1%以上大戶，近2週人數增加","#503 今年董監改選"],"status":"missing","note":"缺質押、改選日期與個別大戶占股本1%的資料，無法完整判定。"},
+ {"id":"margins","title":"三率三升","description":"三種利潤率連續三年成長","conditions":["#9228 毛利率連3年增加","#9229 營益率連3年增加","#9230 淨利率連3年增加"],"status":"available","note":"用4個完整會計年度的損益表加總計算年利潤率，再檢查3次嚴格增加；不足4季的年度不補零。"},
+ {"id":"trend","title":"多頭排列","description":"均線持續3天呈現多頭排列","conditions":["#9067 連3天 MA5 > MA10 > MA20 > MA30 > MA60"],"status":"available","note":"依原站條件列。原站描述提到3日線但条件列沒有，本版不自行加上。"},
+ {"id":"high","title":"最近股價創新高","description":"最近5日創60日新高","conditions":["#9231 最近5日股價創60日新高"],"status":"adapted","note":"教學採收盤價創新高，嚴格高於之前59日收盤最高。原站未公開最高價／收盤價與同高口徑。"},
+ {"id":"volume","title":"爆大量","description":"最近1日成交量放大5倍","conditions":["#353 成交量放大5倍","#94 最低成交張數（原文2000000張待核對）"],"status":"adapted","note":"教學版：今日量 ≥前20日均量×5、≥2000張。這是明示的教學改造，不宣稱原站單位或基準。"},
+ {"id":"holders","title":"主力悄悄進場","description":"大戶增加、量站均量、多頭排列","conditions":["#75 400張以上大戶連4週增加","#932 連5天量 >20日均量","#9067 連3天均線多頭排列"],"status":"adapted","note":"合計400張以上集保人數；4次週增需5週資料。缺原站每位大戶占股本1%條件，結果為近似版。"},
+ {"id":"foreign","title":"外資連續買超","description":"外資連5天、每天500張以上","conditions":["#761 外資連5天買超 ≥500張"],"status":"available","note":"使用外資買賣超張數，5個有效交易日每天≥500張。"},
+ {"id":"trust","title":"投信鎖單發動","description":"投信連3天買超、近3日漲幅5%","conditions":["#761 投信連3天買超 ≥200張","描述：近3日漲幅 ≥5%"],"status":"adapted","note":"採原站文字描述。條件列卻寫MACD近5天且缺參數，無法視為已知規則。"},
+ {"id":"dividend","title":"存股高股息","description":"殖利率5%、PE15倍、連10年配息","conditions":["#6 最近一次除息現金殖利率 >5%","#5 PE <15","#3 連10年現金股利 >1元"],"status":"missing","note":"年股利可取得，但最近一次除息與原站殖利率公式未確認。保留年股利資料供研究，尚不以年殖利率冒充原條件。"},
+ {"id":"eps","title":"EPS成長便宜股","description":"近4季EPS創20季新高、PE20倍以下","conditions":["#918 近4季EPS創近20季新高","#5 PE <20"],"status":"available","note":"需23季完整EPS，計算20個滾動4季總和；最後總和嚴格高於前19個。PE須>0且<20。"},
+ {"id":"box","title":"盤整蓄勢突破","description":"箱形振幅小、量增加、接近高點","conditions":["#9096 20日高低價振幅 <10%","#932 連3天量 >20日均量","#742 股價介於60日最高價95%～105%"],"status":"adapted","note":"振幅=(20日最高-最低)/最低。均量包含當天；原站分母及均量是否排除當天未公開。"},
+ {"id":"relative","title":"相對強勢放量","description":"強於大盤10個百分點、量能增加","conditions":["#787 近5日報酬強於加權10個百分點","#931 近10天至少5天量 >5日均量"],"status":"adapted","note":"個股5日報酬減加權5日報酬≥10個百分點；原站差值／比值口徑未公開。"},
+ {"id":"revenue","title":"業績成長浪","description":"近3月營收年增10%、營收創5年高","conditions":["#30 最近3月營收同比 >10%","#658 最新月營收創5年高"],"status":"adapted","note":"採3月營收加總同比，不是3個YoY平均；新高為最新月嚴格高於之前59月。公司須有完整60月資料。公告時間仍須另核對。"}
+]

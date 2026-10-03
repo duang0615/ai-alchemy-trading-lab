@@ -178,3 +178,10 @@ Obsidian 先沿用上一堂的資料夾；Dify 可之後再串接。此操作單
 ```
 
 這份答案包可以一直用。每次換成自己的需求，逐步補上知識，讓 AI 幫你把想法做成能檢查、能修改、能維護的工具。
+
+
+## 新增禮物：自己的雪鴞選股實作室
+
+[開啟完成頁](https://duang0615.github.io/ai-alchemy-trading-lab/stock-picker/) · [兩次練習與可複製指令](stock-picker-workbook.md) · [實作Skill](../skills/snowyowl-picker-lab/SKILL.md)
+
+從18張卡片拆出欄位、公式、資料與畫面，再寫自己的進出場計畫。公開小樣本與本機全資料範圍分開。缺資料停止，修改先寫假設，只改一項，保存證據。
