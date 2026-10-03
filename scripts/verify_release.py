@@ -1,5 +1,6 @@
 """不登入、不抓行情的公開包驗收。"""
 from pathlib import Path
+from urllib.parse import urlsplit,unquote
 import json, re, hashlib
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -21,7 +22,7 @@ def main():
     page=(ROOT/'index.html').read_text(encoding='utf-8')
     assert '__RESEARCH__' not in page
     for link in re.findall(r'href="([^"]+)"',page):
-        if not link.startswith(('https:','http:','#')):assert (ROOT/link).exists(),link
+        if not link.startswith(('https:','http:','#')):assert (ROOT/unquote(urlsplit(link).path)).exists(),link
     # Scan distributable files only; never inspect credentials/private provider data.
     secrets=[r'gh[pousr]_[A-Za-z0-9]{20,}',r'github_pat_[A-Za-z0-9_]{30,}',r'(?:app|dataset)-[A-Za-z0-9]{15,}',r'-----BEGIN (?:RSA |OPENSSH )?PRIVATE KEY-----']
     for f in ROOT.rglob('*'):

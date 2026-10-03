@@ -59,6 +59,16 @@
       ],
       "artifact": "stock-picker/index.html",
       "evidence": "雪鴞12策略與7分頁；技術檢查詳見stock-picker/validation.json；講師及學生試跑待確認"
+    },
+    {
+      "id": "patterns",
+      "title": "K線、走勢與自訂繪圖學生答案",
+      "status": "awaiting_review",
+      "depends_on": [
+        "picker"
+      ],
+      "artifact": "stock-picker/patterns.html",
+      "evidence": "雪鴞2342檔OHLC、29K線與19輪廓逐一操作，12項引擎測試；自訂保存重開與JSON匯入匯出，待講師檢視與學生試跑"
     }
   ]
 }

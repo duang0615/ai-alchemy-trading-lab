@@ -12,6 +12,12 @@
 
 公開頁是16檔真實教學小樣本，本機版用自己的雪鴞環境掃描目前股票資料。只保留12張雪鴞可計算策略卡與7個資料分頁。框架、公式、資料與畫面分工，讓同學抄完成版，再練習一次只改一個模塊。候選篩選還要補進出場、部位與成本，才能成為完整買賣策略。
 
+## 新增：K線、走勢與自訂型態
+
+[29種K線型態](https://duang0615.github.io/ai-alchemy-trading-lab/stock-picker/patterns.html?mode=candles) · [19種走勢輪廓](https://duang0615.github.io/ai-alchemy-trading-lab/stock-picker/patterns.html?mode=shapes) · [畫自己的型態](https://duang0615.github.io/ai-alchemy-trading-lab/stock-picker/patterns.html?mode=custom) · [課堂答案與AI指令](docs/pattern-lab.md)
+
+支援日／已完成週／已完成月線、K線規格修改、相似門檻、繪圖存檔重開、型態JSON匯入匯出、互動K線、CSV與Markdown。辨識公式為本專案明確定義，形狀相似度不是勝率。型態公開樣本18檔含兩檔事後挑選的W底例子，原條件選股仍維持16檔；本機版使用自己的雪鴞資料。學生Skill：`skills/snowyowl-pattern-lab/SKILL.md`。
+
 ## 課程最後的禮物
 
 **[學生答案包：帶 AI 完成自己的交易工具（Markdown）](docs/student-process-gift.md)**
