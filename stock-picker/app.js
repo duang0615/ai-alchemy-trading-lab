@@ -1,41 +1,37 @@
 /* No credentials or remote stock APIs in the browser. Data comes from the local adapter or teaching snapshot. */
 'use strict';
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let data,presets,active=[],result=[],tab='使用者',mode='table',sortKey='gain3',sortDown=true;
+let data,presets,active=[],result=[],tab='均線與獲利',mode='table',sortKey='gain3',sortDown=true;
 const selected=new Set(),favorites=new Set(JSON.parse(localStorage.getItem('picker-favorites')||'[]'));
 const base=[['股票代號','symbol'],['價格','price'],['漲跌幅 %','change'],['成交量 張','volume']];
 const tabs={
- '使用者':[['5日均價','ma5'],['10日均價','ma10'],['20日均價','ma20'],['5週均價','wma5'],['10週均價','wma10'],['20週均價','wma20'],['季度ROE %','ROE季'],['季度ROA %','ROA季']],
- '日籌碼':[['家數差','家數差'],['集中度 %','籌碼集中度'],['主力 張','主力買賣超'],['三大法人 張','三大法人'],['外資 張','外資'],['投信 張','投信'],['自營 張','自營'],['自營避險 張','自營避險'],['主動ETF','主動ETF'],['八大官股 張','八大官股'],['中實戶','中實戶'],['融資增減 張','融資增減'],['融券增減 張','融券增減'],['借券賣出餘額 張','借券賣出餘額'],['當沖量 張','當沖量']],
- '周籌碼':[['5週均價','wma5'],['10週均價','wma10'],['20週均價','wma20'],['週主力','週主力'],['週外資','週外資'],['週投信','週投信']],
- '周大戶散戶':[['400張以上人數','大戶人數'],['400張以上持股比例 %','大戶比例'],['散戶人數','散戶人數']],
+ '均線與獲利':[['5日均價','ma5'],['10日均價','ma10'],['20日均價','ma20'],['5週均價','wma5'],['10週均價','wma10'],['20週均價','wma20'],['季度ROE %','ROE季'],['季度ROA %','ROA季']],
+ '日籌碼':[['家數差','家數差'],['集中度 %','籌碼集中度'],['主力 張','主力買賣超'],['三大法人 張','三大法人'],['外資 張','外資'],['投信 張','投信'],['自營 張','自營'],['自營避險 張','自營避險'],['八大官股 張','八大官股'],['融資增減 張','融資增減'],['融券增減 張','融券增減'],['借券賣出餘額 張','借券賣出餘額'],['當沖量 張','當沖量']],
+ '大戶持股':[['400張以上人數','大戶人數'],['400張以上持股比例 %','大戶比例']],
  '營收動能':[['月營收年增 %','月營收年增'],['月營收月增 %','月營收月增'],['3月合計年增 %','revenue3_yoy'],['3日漲幅 %','gain3'],['5日漲幅 %','gain5'],['相對大盤5日 百分點','relative5']],
  '風險指標':[['20日箱形振幅 %','box_range'],['Beta一年','Beta一年'],['負債比率 %','負債比率'],['流動比率 %','流動比率']],
  '價值評估':[['本益比','pe'],['股價淨值比','股價淨值比'],['年度殖利率 %','年度殖利率']],
- '樂活五線譜':[['平均線','五線譜均線'],['上緣2σ','五線譜上緣'],['下緣2σ','五線譜下緣']],
  '財報':['營業收入','營業毛利','營業費用','營業淨利','營業外收入及支出','稅前純益','所得稅費用','稅後純益','eps','資產','資產_流動','現金','庫存','總應收帳款','資產_非流動','資產_無形','固定資產','負債總額','負債_流動','負債_非流動','股東權益_總額','營運現金流','投資現金流','籌資現金流','資本支出','自由現金流','淨現金流_千'].map(k=>[k+(k==='eps'?' 元':' 千元'),k]),
- 'EPS預測':[['預測季度1','預測季度1'],['預測EPS1','預測EPS1'],['預測季度2','預測季度2'],['預測EPS2','預測EPS2'],['預測季度3','預測季度3'],['預測EPS3','預測EPS3'],['預測季度4','預測季度4'],['預測EPS4','預測EPS4']]
 };
-const labels={available:'雪鴞可計算',adapted:'明示教學改造',missing:'缺資料／規則待確認'};
+const labels={available:'雪鴞可計算'};
 function cards(){let q=$('#search').value.trim().toLowerCase();let items=presets.filter(p=>(p.title+p.description+p.conditions.join('')).toLowerCase().includes(q));
- $('#card-count').textContent=`${items.length} / 18 個策略`;
+ $('#card-count').textContent=`${items.length} / ${presets.length} 個策略`;
  $('#cards').innerHTML=items.map(p=>`<article class="strategy ${selected.has(p.id)?'selected':''}" data-id="${p.id}"><div class="card-title"><input type="checkbox" aria-label="組合選擇 ${esc(p.title)}" data-select="${p.id}" ${selected.has(p.id)?'checked':''}><button data-run="${p.id}">${esc(p.title)}</button></div><p class="description">${esc(p.description)}</p>${p.conditions.slice(0,3).map(c=>`<div class="condition">${esc(c)}</div>`).join('')}${p.conditions.length>3?`<details><summary>展開更多（${p.conditions.length-3}條）</summary>${p.conditions.slice(3).map(c=>`<div class="condition">${esc(c)}</div>`).join('')}</details>`:''}<span class="badge ${p.status}">${labels[p.status]}</span><details><summary>規則與資料核對</summary><p>${esc(p.note)}</p></details></article>`).join('')||'<p class="empty">沒有符合的策略。查股票請先執行策略，再搜尋股號。</p>';
  $('#selection-count').textContent=`已選 ${selected.size} 個策略`;
 }
 function pass(r,id){if(id==='gain'){let ranked=[...data.rows].filter(x=>x.gain3!=null).sort((a,b)=>b.gain3-a.gain3);return ranked.slice(0,Math.max(1,Number($('#gain-limit').value)||150)).some(x=>x.symbol===r.symbol)}return r.passes.includes(id)}
 function filterRows(){let combo=$('#combine-mode').value,min=Math.max(0,Number($('#min-volume').value)||0),q=$('#result-search').value.trim().toLowerCase();return data.rows.filter(r=>{let checks=active.map(id=>pass(r,id));return(active.length===0||(combo==='and'?checks.every(Boolean):checks.some(Boolean)))&&(min===0||(r.volume!=null&&r.volume>=min))&&(!$('#only-favorite').checked||favorites.has(r.symbol))&&(!q||(r.symbol+r.name).toLowerCase().includes(q))})}
 function openResults(ids,fav=false){active=ids;$('#result-search').value='';$('#only-favorite').checked=fav;$('#detail').hidden=true;$('#results-title').textContent=ids.length?ids.map(id=>presets.find(p=>p.id===id).title).join(' ＋ '):'我的收藏';
- let blocked=ids.map(id=>presets.find(p=>p.id===id)).filter(p=>p.status==='missing');
  $('#rule-note').textContent=ids.map(id=>{let p=presets.find(x=>x.id===id);return p.title+'：'+p.note}).join('　')||'收藏只存於此瀏覽器，並非持倉資料。';
- if(blocked.length){result=[];$('#result-meta').textContent='停止計算：'+blocked.map(p=>p.title).join('、')+' 尚缺資料。結果未知，不能解讀為0檔。';renderTable(true);renderCharts()}else refresh();
+ refresh();
  if(!$('#results').open)$('#results').showModal();
 }
 function fmt(v){return v==null?'資料未提供':typeof v==='number'?v.toLocaleString('zh-TW',{maximumFractionDigits:2}):esc(v)}
-function refresh(){if(active.some(id=>presets.find(p=>p.id===id).status==='missing')){openResults(active);return}result=filterRows();$('#result-meta').textContent=`找到 ${result.length} 檔符合條件股票 ｜ ${data.asof} ｜ ${data.mode==='teaching_sample'?'教學小樣本':'本機資料範圍'} ${data.universe_count} 檔 ｜ 候選名單尚待交易計畫`;
- let note=active.map(id=>{let p=presets.find(x=>x.id===id);return p.title+'：'+p.note}).join('　');let keys=tabs[tab].map(x=>x[1]);let periods=[...new Set(keys.map(k=>data.fundamental_periods[k]).filter(Boolean))];$('#rule-note').textContent=(note||'收藏清單。')+(periods.length?'　欄位最新期間：'+periods.join('、'):'')+'　未提供欄位保留空缺，年度與季度不混用。';
+function refresh(){result=filterRows();$('#result-meta').textContent=`找到 ${result.length} 檔符合條件股票 ｜ ${data.asof} ｜ ${data.mode==='teaching_sample'?'教學小樣本':'本機資料範圍'} ${data.universe_count} 檔 ｜ 候選名單尚待交易計畫`;
+ let note=active.map(id=>{let p=presets.find(x=>x.id===id);return p.title+'：'+p.note}).join('　');let keys=tabs[tab].map(x=>x[1]);let periods=[...new Set(keys.map(k=>data.fundamental_periods[k]).filter(Boolean))];$('#rule-note').textContent=(note||'收藏清單。')+(periods.length?'　欄位最新期間：'+periods.join('、'):'')+'　個別公司資料不足顯示缺值；財報期間須另核對公告日。';
  result.sort((a,b)=>{let av=a[sortKey],bv=b[sortKey];if(av==null)return bv==null?0:1;if(bv==null)return-1;return(typeof av==='string'?av.localeCompare(bv):av-bv)*(sortDown?-1:1)});renderTable();renderCharts();}
-function renderTable(blocked=false){let columns=[...base,...tabs[tab]];$('#table-head').innerHTML='<tr>'+columns.map(([title,key])=>`<th><button data-sort="${key}">${esc(title)} ${sortKey===key?(sortDown?'↓':'↑'):''}</button></th>`).join('')+'<th>收藏</th></tr>';
- $('#table-body').innerHTML=blocked?`<tr><td colspan="${columns.length+1}" class="empty">先補齊規則／資料，再讓AI計算。</td></tr>`:result.length?result.map(r=>'<tr>'+columns.map(([,key],i)=>`<td class="${key==='change'?(r.change>=0?'up':'down'):''}">${i===0?`<button class="stock-link" data-detail="${r.symbol}">${esc(r.name)}<small>${r.symbol}</small></button>`:fmt(r[key])}</td>`).join('')+`<td><button data-fav="${r.symbol}" aria-label="收藏 ${r.symbol}" aria-pressed="${favorites.has(r.symbol)}">${favorites.has(r.symbol)?'★':'☆'}</button></td></tr>`).join(''):`<tr><td colspan="${columns.length+1}" class="empty">目前沒有符合的股票。先查資料範圍與單位，再考慮是否調整條件。</td></tr>`;
+function renderTable(){let columns=[...base,...tabs[tab]];$('#table-head').innerHTML='<tr>'+columns.map(([title,key])=>`<th><button data-sort="${key}">${esc(title)} ${sortKey===key?(sortDown?'↓':'↑'):''}</button></th>`).join('')+'<th>收藏</th></tr>';
+ $('#table-body').innerHTML=result.length?result.map(r=>'<tr>'+columns.map(([,key],i)=>`<td class="${key==='change'?(r.change>=0?'up':'down'):''}">${i===0?`<button class="stock-link" data-detail="${r.symbol}">${esc(r.name)}<small>${r.symbol}</small></button>`:fmt(r[key])}</td>`).join('')+`<td><button data-fav="${r.symbol}" aria-label="收藏 ${r.symbol}" aria-pressed="${favorites.has(r.symbol)}">${favorites.has(r.symbol)?'★':'☆'}</button></td></tr>`).join(''):`<tr><td colspan="${columns.length+1}" class="empty">目前沒有符合的股票。先查資料範圍與單位，再考慮是否調整條件。</td></tr>`;
 }
 function lineChart(r){let vals=r.chart.map(p=>p.value);if(vals.length<2)return'<p>圖表資料不足</p>';let min=Math.min(...vals),max=Math.max(...vals),range=max-min||1;let points=vals.map((v,i)=>`${(i/(vals.length-1)*600).toFixed(2)},${(155-(v-min)/range*140).toFixed(2)}`).join(' ');return `<svg viewBox="0 0 600 180" role="img" aria-label="${esc(r.name)}收盤走勢，第一日等於100"><path d="M0 155H600" stroke="#34383f"/><polyline points="${points}" fill="none" stroke="#78a7ff" stroke-width="2.5"/><text x="2" y="177" fill="#a1a8b2" font-size="14">${r.chart[0].date}</text><text x="480" y="177" fill="#a1a8b2" font-size="14">${r.chart.at(-1).date}</text></svg>`}
 function renderCharts(){$('#charts').innerHTML=result.map(r=>`<article class="chart"><h3>${esc(r.name)} <small>${r.symbol}</small></h3><span>${fmt(r.price)}元　<span class="${r.change>=0?'up':'down'}">${fmt(r.change)}%</span></span>${lineChart(r)}<p>${r.chart_unit}；近${r.chart.length}個交易日。量 ${fmt(r.volume)}張</p><button data-detail="${r.symbol}">詳情 ${r.symbol}</button></article>`).join('')||'<p class="empty">沒有可顯示的圖表。</p>'}

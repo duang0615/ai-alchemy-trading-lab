@@ -34,24 +34,20 @@
     "trend_after_minimum_2000_lots": 6
   },
   "browser": {
-    "18_cards": "clicked and checked 12 results / 6 stopped",
-    "10_tabs": "headers verified; missing fields are explicit",
-    "chart_cards": 11,
-    "favorite_6533": "persisted and displayed in favorite list",
+    "12_cards": "all clicked; counts match local snapshot",
+    "7_tabs": "all clicked; headers verified; unsupported fields removed",
+    "local_and_trend_high": 169,
+    "local_or_trend_high": 341,
+    "chart_cards_after_volume_filter": 80,
     "settings": "258 to 80",
-    "result_search": "6533 displayed",
     "mobile_layout": "not browser-tested",
-    "downloads": {
-      "CSV": "actual file checked, 6 candidates plus header",
-      "Markdown": "actual file checked, hypothesis / observation / settings / next steps"
-    }
+    "downloads": "unchanged implementation; prior v11 files verified"
   },
   "limitations": [
-    "6 cards awaiting required data or rule clarification",
-    "7 computable rules are disclosed teaching adaptations",
-    "no original hidden-formula parity",
-    "demo is not full market",
+    "public demo is 16 stocks, not full market",
     "fundamental announcement times not verified",
-    "student own-account trial pending"
-  ]
+    "student own-account trial pending",
+    "candidate filters require separate complete trade rules before backtesting"
+  ],
+  "version": "v12-snowyowl-only"
 }

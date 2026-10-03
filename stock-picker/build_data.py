@@ -93,7 +93,7 @@ def build(env,demo=False,output=None):
         for r in rows:
             r['passes']=[k for k in r['passes'] if k!='gain']
             if r in ranking[:min(150,len(rows))] and r['gain3'] is not None:r['passes'].append('gain')
-    payload={'source':'Snowyowl MSMP','asof':str(asof.date()),'built_at':datetime.datetime.now().isoformat(timespec='seconds'),'mode':'teaching_sample' if demo else 'local_market','universe_count':len(rows),'market_count':len(universe),'daily_volume_unit':'張','fundamental_periods':periods,'errors':errors,'rows':rows,'warnings':['目前存續股票清單，非歷史時點成分股。','營收／財報標示會計期間，沒有逐筆公告時間，不能直接當歷史回測輸入。','原站未公開公式的項目使用明示教學定義。','候選名單尚未包含買進、賣出、部位與成交條件。']}
+    payload={'source':'Snowyowl MSMP','asof':str(asof.date()),'built_at':datetime.datetime.now().isoformat(timespec='seconds'),'mode':'teaching_sample' if demo else 'local_market','universe_count':len(rows),'market_count':len(universe),'daily_volume_unit':'張','fundamental_periods':periods,'errors':errors,'rows':rows,'warnings':['目前存續股票清單，非歷史時點成分股。','營收／財報標示會計期間，沒有逐筆公告時間，不能直接當歷史回測輸入。','條件依本專案明確規格計算，資料不足不補零。','候選名單尚未包含買進、賣出、部位與成交條件。']}
     target=Path(output) if output else ROOT.parent/'.local'/'stock-picker-data.json'
     target.parent.mkdir(parents=True,exist_ok=True);target.write_text(json.dumps(payload,ensure_ascii=False,allow_nan=False,separators=(',',':')),encoding='utf-8')
     print(json.dumps({'asof':payload['asof'],'rows':len(rows),'errors':errors,'output':str(target)},ensure_ascii=False))

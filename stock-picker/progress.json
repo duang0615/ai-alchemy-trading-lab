@@ -1,15 +1,15 @@
 {
-  "project": "雪鴞選股網站拆解",
+  "project": "雪鴞12策略選股實作",
   "updated": "2026-10-03",
   "live_agent_tracking": false,
   "tasks": [
     {
       "id": "source",
-      "title": "公開18卡與互動拆解",
+      "title": "12策略規格與7分頁",
       "status": "completed",
       "depends_on": [],
       "artifact": "docs/stock-picker-source-audit.md",
-      "evidence": "瀏覽器查讀原站與董監展開條件，記錄矛盾與未知"
+      "evidence": "依講師指定縮小範圍，僅保留已有雪鴞資料與計算規格"
     },
     {
       "id": "adapter",
@@ -29,17 +29,7 @@
         "adapter"
       ],
       "artifact": "stock-picker/index.html",
-      "evidence": "18卡、AND9／OR11、10分頁、11圖表、收藏6533、最低量258→80，瀏覽器實際操作"
-    },
-    {
-      "id": "parity",
-      "title": "原站完整規則與缺欄位對齊",
-      "status": "awaiting_data",
-      "depends_on": [
-        "source"
-      ],
-      "artifact": "docs/stock-picker-source-audit.md",
-      "evidence": "6卡缺資料或完整定義，7卡明示改造，未宣稱完全等價"
+      "evidence": "12卡逐一點選與數量核對、7分頁、80圖表、最低量258→80、AND169／OR341通過瀏覽器實際操作"
     },
     {
       "id": "teaching",
@@ -51,5 +41,6 @@
       "artifact": "docs/stock-picker-workbook.md",
       "evidence": "兩個10分鐘實作、Skill與完整答案已建立，待實際授課"
     }
-  ]
+  ],
+  "scope": "僅保留雪鴞可計算功能"
 }

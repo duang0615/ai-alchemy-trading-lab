@@ -184,4 +184,4 @@ Obsidian 先沿用上一堂的資料夾；Dify 可之後再串接。此操作單
 
 [開啟完成頁](https://duang0615.github.io/ai-alchemy-trading-lab/stock-picker/) · [兩次練習與可複製指令](stock-picker-workbook.md) · [實作Skill](../skills/snowyowl-picker-lab/SKILL.md)
 
-從18張卡片拆出欄位、公式、資料與畫面，再寫自己的進出場計畫。公開小樣本與本機全資料範圍分開。缺資料停止，修改先寫假設，只改一項，保存證據。
+從12張可計算卡片拆出欄位、公式、資料與畫面，再寫自己的進出場計畫。公開小樣本與本機全資料範圍分開。缺資料停止，修改先寫假設，只改一項，保存證據。
