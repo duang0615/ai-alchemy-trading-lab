@@ -62,7 +62,8 @@ def sample_message(strategy='trend', minimum=0, snapshot=None):
 
 def csv_message(path, date, rule):
     if not date or not rule: raise ValueError('CSV 必須補上 --date 資料日與 --rule 選股條件。')
-    rows = list(csv.DictReader(Path(path).open(encoding='utf-8-sig',newline='')))
+    with Path(path).open(encoding='utf-8-sig',newline='') as handle:
+        rows = list(csv.DictReader(handle))
     lines = ['AI 煉金術｜選股結果', f'資料日：{date}', f'條件：{rule}', f'來源：使用者匯出的CSV；候選 {len(rows)}檔']
     if not rows: lines.append('本次沒有符合的候選。')
     for r in rows:
