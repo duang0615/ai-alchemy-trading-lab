@@ -78,5 +78,4 @@ Skill 在 ZIP 內，可讓 AI 直接讀取；需要安裝時，把 `skills/momen
 
 ## 畢業策略練習
 
-[20 日突破：策略規格、歷史核對與 AI 修改指令](docs/graduation-strategy.md)。既有 WorkBuddy 交易明細勝率 47.93%，沒有足夠證據稱為高勝率；新版本須另行回測。
-
+[台積電法說會：策略框架、資料核對與 AI 修改指令](docs/graduation-strategy.md)。原研究83.3%來自12次小時線樣本，價格一致性仍待驗證，不能當已驗證高勝率。
