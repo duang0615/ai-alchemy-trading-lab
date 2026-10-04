@@ -1,0 +1,51 @@
+{
+  "strategy": "brk20 / hold10 / fixed 100000",
+  "source_sha256": "eb872aa74c9ec8896e30506403df82acab97a1788ae7312f251d817b5237e833",
+  "code_sha256": "2095a186491a382031f552f271e36481d8976dc04ab04efceb2760f4d7e96a90",
+  "report_sha256": "1d1158fac05f6a0da6788a2b21ec11234c5f5798037c561999a91b9290cc1991",
+  "closed_trades": 4546,
+  "wins": 2179,
+  "win_rate_pct": 47.93224813022437,
+  "mean_net_return_pct": 1.7865793924633822,
+  "profit_factor_amount_weighted": 1.6071484981729887,
+  "worst_net_return_pct": -21.301650153535583,
+  "first_entry": "2022-08-24",
+  "last_exit": "2026-09-07",
+  "unclosed_excluded": 47,
+  "cashflow_reconciliation_max_error": 5.820766091346741e-11,
+  "validation": "Recomputed from existing WorkBuddy CSV, not a fresh api.bt run. Universe is retrospectively selected; no independent OOS proof; original launch parameters and engine version not archived beside this CSV.",
+  "high_win_rate_status": "Not established; do not label high win rate.",
+  "by_entry_year": [
+    {
+      "year": "2022",
+      "trades": 337,
+      "win_rate_pct": 45.4,
+      "mean_net_return_pct": 0.741
+    },
+    {
+      "year": "2023",
+      "trades": 1155,
+      "win_rate_pct": 50.3,
+      "mean_net_return_pct": 1.19
+    },
+    {
+      "year": "2024",
+      "trades": 978,
+      "win_rate_pct": 44.48,
+      "mean_net_return_pct": 1.036
+    },
+    {
+      "year": "2025",
+      "trades": 1143,
+      "win_rate_pct": 52.06,
+      "mean_net_return_pct": 2.335
+    },
+    {
+      "year": "2026",
+      "trades": 933,
+      "win_rate_pct": 44.48,
+      "mean_net_return_pct": 3.017
+    }
+  ],
+  "source_file": "WorkBuddy snowyowl_orb/output/trades_detail_dump_fix100000.csv"
+}
