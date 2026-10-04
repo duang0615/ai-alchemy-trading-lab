@@ -24,7 +24,7 @@ def main():
     for link in re.findall(r'href="([^"]+)"',page):
         if not link.startswith(('https:','http:','#')):assert (ROOT/unquote(urlsplit(link).path)).exists(),link
     # Scan distributable files only; never inspect credentials/private provider data.
-    secrets=[r'gh[pousr]_[A-Za-z0-9]{20,}',r'github_pat_[A-Za-z0-9_]{30,}',r'(?:app|dataset)-[A-Za-z0-9]{15,}',r'-----BEGIN (?:RSA |OPENSSH )?PRIVATE KEY-----']
+    secrets=[r'gh[pousr]_[A-Za-z0-9]{20,}',r'github_pat_[A-Za-z0-9_]{30,}',r'(?:app|dataset)-[A-Za-z0-9]{15,}',r'\b\d{6,12}:[A-Za-z0-9_-]{30,}\b',r'-----BEGIN (?:RSA |OPENSSH )?PRIVATE KEY-----']
     for f in ROOT.rglob('*'):
         if not f.is_file() or any(p in {'.git','.local','__pycache__'} for p in f.relative_to(ROOT).parts):continue
         if f.name.startswith('.env'):continue

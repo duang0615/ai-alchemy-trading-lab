@@ -1,6 +1,6 @@
 {
   "project": "AI煉金術交易研究實作",
-  "updated": "2026-10-03",
+  "updated": "2026-10-04",
   "tasks": [
     {
       "id": "source",
@@ -69,6 +69,16 @@
       ],
       "artifact": "stock-picker/patterns.html",
       "evidence": "雪鴞2342檔OHLC、29K線與19輪廓逐一操作，12項引擎測試；自訂保存重開與JSON匯入匯出，待講師檢視與學生試跑"
+    },
+    {
+      "id": "telegram_notify",
+      "title": "選股結果通知與學生Skill",
+      "status": "awaiting_review",
+      "depends_on": [
+        "picker"
+      ],
+      "artifact": "docs/telegram-results.md",
+      "evidence": "8項訊息生成與模擬傳送測試通過；實際Token與手機收件尚未測試；無排程或遙控代理"
     }
   ]
 }

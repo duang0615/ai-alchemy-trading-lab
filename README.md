@@ -18,6 +18,12 @@
 
 支援日／已完成週／已完成月線、K線規格修改、相似門檻、繪圖存檔重開、型態JSON匯入匯出、互動K線、CSV與Markdown。辨識公式為本專案明確定義，形狀相似度不是勝率。型態公開樣本18檔含兩檔事後挑選的W底例子，原條件選股仍維持16檔；本機版使用自己的雪鴞資料。學生Skill：`skills/snowyowl-pattern-lab/SKILL.md`。
 
+## 延續上一堂：選股結果送到 Telegram
+
+[通知實作與AI指令](docs/telegram-results.md) · `skills/telegram-results-lab/SKILL.md`
+
+沿用自己的 Bot Token 與聊天ID，先預覽選股快照、匯出CSV或文字，再使用本機 `scripts/telegram_notify.py` 單次推送。Token只由本機程式讀取，公開網站不存帳密。訊息生成與模擬請求測試已通過；真實Token送件待同學自行驗收。這是通知功能，Telegram遙控代理與背景排程仍未實作。
+
 ## 課程最後的禮物
 
 **[學生答案包：帶 AI 完成自己的交易工具（Markdown）](docs/student-process-gift.md)**
