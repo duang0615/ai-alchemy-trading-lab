@@ -5,7 +5,7 @@ description: 第二堂主線「選股→交易計畫→進場→出場」。幫�
 
 # 進場到價通知與出場作業
 
-先定位學生專案，讀 `AGENTS.md`、`docs/price-alerts.md`、`docs/exit-signals.md`。
+先定位學生專案，讀 `AGENTS.md`、`docs/price-alerts.md`、`docs/exit-signals.md`。安裝一定要照 AGENTS.md 的「安裝注意事項」；學生看不到收藏或 Telegram 設定，先依第 6 點更新與重開，不要自己補做設定頁。
 
 ## 進場（已完成的功能，帶學生用）
 

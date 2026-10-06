@@ -6,6 +6,8 @@
 
 **[開啟圖像化實作頁](https://duang0615.github.io/ai-alchemy-trading-lab/)** · **[下載整包 ZIP](https://github.com/duang0615/ai-alchemy-trading-lab/archive/refs/heads/main.zip)**
 
+> **給 AI 的安裝注意事項：一定要照 [AGENTS.md](AGENTS.md) 安裝。** 只用 GitHub 最新版（`git clone` 或先 `git pull`），不要自己重寫或另做網頁；用 `python -X utf8 stock-picker/serve.py` 開 `http://127.0.0.1:8766`。收藏與 Telegram 到價設定在右上角「我的收藏」裡，不是另一個頁面。看不到就是版本舊或網址錯，先更新再重開。
+
 ## 第二堂主線：選股 → 交易計畫 → 進場 → 出場
 
 | 步驟 | 做什麼 | 位置 |

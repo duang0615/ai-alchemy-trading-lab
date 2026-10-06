@@ -7,6 +7,8 @@ description: 從本專案的12張雪鴞選股卡理解規格、核對資料、�
 
 先定位包含 `stock-picker/presets.json` 的學生專案，讀 AGENTS.md、docs/stock-picker-workbook.md、docs/stock-picker-source-audit.md。不要寫死老師電腦路徑。
 
+**安裝一定要照 AGENTS.md 的「安裝注意事項」：** 只用 GitHub 最新版、不要重寫或另做網頁、用 `serve.py` 開 `http://127.0.0.1:8766`，並確認 `stock-picker/index.html` 有 `alert-panel`。收藏與 Telegram 設定在「我的收藏」裡。
+
 1. 問清使用者的週期與要解決的投資問題。若已提供，就直接沿用。
 2. 讀指定卡片的條件與計算定義，確認使用者是否要修改。只使用本版12個可計算策略和7個資料分頁，未實作項目不要加回介面。
 3. 本機重跑只用已有雪鴞環境。`build_data.py --env <本機.env>`由登入助手讀帳密，AI不讀檔、不顯示、不提交。原始資料只留`.local`。

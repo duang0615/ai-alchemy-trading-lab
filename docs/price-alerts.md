@@ -12,7 +12,7 @@ flowchart LR
 
 ## 1. 啟動本機版選股器
 
-到價通知要存自己的 Token，只能在自己電腦執行；公開完成版只能看畫面。
+到價通知要存自己的 Token，只能在自己電腦執行；公開完成版只能看畫面。請 AI 依 [AGENTS.md](../AGENTS.md) 的安裝注意事項安裝最新版，不要讓它自己重寫網頁。
 
 ```powershell
 python -X utf8 stock-picker/serve.py
