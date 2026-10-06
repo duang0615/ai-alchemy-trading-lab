@@ -30,20 +30,31 @@ def chunks(text, limit=4000):
     if current: result.append(''.join(current))
     return result
 
+TOKEN_PATTERN = r'\d+:[A-Za-z0-9_-]+'
+# Private/group chats are numeric; public channels may use @username (5-32 chars).
+TARGET_PATTERN = r'-?\d+|@[A-Za-z][A-Za-z0-9_]{4,31}'
+
+def valid_token(token): return bool(re.fullmatch(TOKEN_PATTERN, token or ''))
+def valid_target(target): return bool(re.fullmatch(TARGET_PATTERN, target or ''))
+
+def read_env(env_path):
+    values = {}
+    for raw in Path(env_path).read_text(encoding='utf-8-sig').splitlines():
+        raw = raw.strip()
+        if not raw or raw.startswith('#') or '=' not in raw: continue
+        key, value = raw.split('=', 1)
+        values[key.strip()] = value.strip().strip('\"\'')
+    return values
+
 def credentials(env_path=None):
     values = dict(os.environ)
-    if env_path:
-        for raw in Path(env_path).read_text(encoding='utf-8-sig').splitlines():
-            raw = raw.strip()
-            if not raw or raw.startswith('#') or '=' not in raw: continue
-            key, value = raw.split('=', 1)
-            values[key.strip()] = value.strip().strip('\"\'')
+    if env_path: values.update(read_env(env_path))
     token = values.get('TELEGRAM_BOT_TOKEN', '').strip()
     target = values.get('TELEGRAM_CHAT_ID', '').strip()
-    if not re.fullmatch(r'\d+:[A-Za-z0-9_-]+', token):
+    if not valid_token(token):
         raise ValueError('請在本機設定 TELEGRAM_BOT_TOKEN。')
-    if not re.fullmatch(r'-?\d+', target):
-        raise ValueError('請在本機設定數字 TELEGRAM_CHAT_ID（私人聊天或群組 ID）。')
+    if not valid_target(target):
+        raise ValueError('請在本機設定 TELEGRAM_CHAT_ID：自己的數字 ID、-100 開頭的頻道／群組 ID，或 @頻道名稱。')
     return token, target
 
 def sample_message(strategy='trend', minimum=0, snapshot=None):

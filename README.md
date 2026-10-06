@@ -6,6 +6,17 @@
 
 **[開啟圖像化實作頁](https://duang0615.github.io/ai-alchemy-trading-lab/)** · **[下載整包 ZIP](https://github.com/duang0615/ai-alchemy-trading-lab/archive/refs/heads/main.zip)**
 
+## 第二堂主線：選股 → 交易計畫 → 進場 → 出場
+
+| 步驟 | 做什麼 | 位置 |
+|---|---|---|
+| 選股 | 雪鴞策略卡、K線與走勢型態，找出候選 | [選股實作室](https://duang0615.github.io/ai-alchemy-trading-lab/stock-picker/) |
+| 交易計畫 | 候選放進收藏，寫進場價、停損與理由 | 收藏頁「到價進場通知」 |
+| 進場 | 本機盯盤，到價推到自己的 Telegram 頻道 | [docs/price-alerts.md](docs/price-alerts.md)、`scripts/price_alert.py` |
+| 出場 | 自己帶 AI 做：爆量黑K、可轉債轉換價、前高壓力 | [docs/exit-signals.md](docs/exit-signals.md) |
+
+學生 Skill：`skills/entry-exit-lab/SKILL.md`。Token 由學生自己在本機收藏頁填入，只存在 `.local`，網頁不回顯。到價通知只是提醒，不會下單。
+
 ## 新增：雪鴞選股實作室
 
 **[開啟12張雪鴞策略卡與選股實作](https://duang0615.github.io/ai-alchemy-trading-lab/stock-picker/)** · **[抄答案與兩次休息練習](docs/stock-picker-workbook.md)** · **[策略規格與資料口徑](docs/stock-picker-source-audit.md)**
